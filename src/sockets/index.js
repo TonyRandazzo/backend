@@ -1,9 +1,9 @@
-const chatHandlers = require('./chatHandlers');
+const ChatHandlers = require('./ChatHandlers');
 
 function setupSockets(io) {
   io.on('connection', (socket) => {
     console.log('Nuovo client connesso:', socket.id);
-    chatHandlers(io, socket);
+    ChatHandlers(io, socket);
   });
 }
 
